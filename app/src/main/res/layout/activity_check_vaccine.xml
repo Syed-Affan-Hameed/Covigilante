@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CheckVaccineActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/llmain">
+    <EditText
+        android:id="@+id/etpincode"
+        android:layout_width="0dp"
+        android:background="@color/white"
+        android:layout_weight="0.25"
+        android:textSize="20sp"
+        android:textColorHint="#919191"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Enter the Pincode"
+        android:layout_margin="5dp"
+        android:maxLines="1"
+        />
+    <Button
+        android:id="@+id/btnsearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="4dp"
+        android:text="Search"
+        android:textSize="15sp"
+       />
+</LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvvaccinedetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/llmain"/>
+    <ProgressBar
+        android:id="@+id/PBprogressbar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>
